@@ -1,0 +1,23 @@
+#hiddeniframe { position : fixed ; top : -5000px ; }
+
+h1, h2 {
+    text-align:center;
+}
+
+.container {
+    margin: 40px auto;
+}
+
+#puppy {
+    text-align:center;
+}
+
+ul#attribution {
+    font-size:0.8em;
+    list-style-type:none;
+}
+
+ul#attribution li {
+    margin-left:40px;
+    margin-bottom:5px;
+}

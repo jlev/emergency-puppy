@@ -1,16 +1,51 @@
 <html>
 <head>
-    <script type="text/javascript" src="load_puppies.js" ></script>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <script src="lib/modernizr.custom.98343.js"></script>
+    <script type="text/javascript">
+        Modernizr.load([
+            {
+                load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+                       'js/parse_twitter.js',
+                       'css/style.css'
+                      ]
+
+            },
+            {
+                load: 'http://platform.twitter.com/widgets.js',
+                callback: function() {
+                    parsetwitter();
+                }
+            },
+            {
+                test: Modernizr.emoji,
+                nope: ['lib/minEmoji/js/minEmoji.js', 'lib/minemoji/css/minEmoji.css'],
+                callback: function emojiTitle() {
+                    $('h1').html(minEmoji('\ud83d\udc86 \ud83d\udc80 \ud83d\udca9.com'));
+                }
+            }]);
+    </script>
 </head>
 <body>
 
+    <h1>&#x1f486; &#x1f480; &#x1f4a9;.com</h1>
+    <h2>How about a puppy instead?</h2>
+
 <div id="hiddeniframe">
     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/EmergencyPuppy" data-chrome="nofooter noheader" data-widget-id="416114645837955072" data-tweet-limit="1"></a>
-    <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js" async onload="parsetwitter()"></script>
 </div>
 
-<div id="puppy"></div>
+<div class="container">
+    <div id="puppy">
+        Loading puppy...
+    </div>
+</div>
+
+<ul id="attribution">
+    <li>Puppies from <a href="https://twitter.com/EmergencyPuppy">@EmergencyPuppy</a></li>
+    <li>Domain from <a href="https://twitter.com/atl">@atl</a> via <a href="https://twitter.com/DanielZarick">@DanielZarick</a>'s <a href="http://webdomainwhiteelephantexchange.com">Web Domain White Elephant Exchange</a>
+
+</ul>
 
 </body>
 </html>
