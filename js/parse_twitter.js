@@ -15,7 +15,7 @@ function parsetwitter(){
                 txt = tweets[p].innerText;
                 link = tweetmeta[p].href;
                 media = tweets[p].getElementsByTagName('img');
-                content += '<img src="'+media[0].src+'" alt="'+txt+'">';
+                content += '<a href="'+link+'"><img src="'+media[0].src+'" title="'+txt+'"></a>';
                 
             }
             
