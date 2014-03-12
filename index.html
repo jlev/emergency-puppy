@@ -15,6 +15,9 @@
             {
                 load: 'http://platform.twitter.com/widgets.js',
                 callback: function() {
+                    $('h2').delay(1000).fadeIn();
+                    $('h3').delay(3000).fadeIn();
+                    $('#puppy').delay(4000).fadeIn();
                     parsetwitter();
                 }
             },
@@ -23,6 +26,7 @@
                 nope: ['lib/minEmoji/js/minEmoji.js', 'lib/minemoji/css/minEmoji.css'],
                 callback: function emojiTitle() {
                     $('h1').html(minEmoji('\ud83d\udc86 \ud83d\udc80 \ud83d\udca9.com'));
+                    $('h3').html(minEmoji('wouldn\'t you rather a \uD83D\uDC36 instead?'));
                 }
             }]);
     </script>
@@ -31,14 +35,15 @@
 <body>
 
     <h1>&#x1f486; &#x1f480; &#x1f4a9;.com</h1>
+    <h2 style="display:none;">how rude&hellip;</h2>
+    <h3 style="display:none;">wouldn't you rather a &#x1f436; instead?</h3>
 
 <div id="hiddeniframe">
     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/EmergencyPuppy" data-chrome="nofooter noheader" data-widget-id="416114645837955072" data-tweet-limit="1"></a>
 </div>
 
 <div class="container">
-    <div id="puppy">
-        How about a puppy instead?<br /><br />
+    <div id="puppy" style="display:none;">
         <img src="http://fbi.gov/spinner.gif">
     </div>
 </div>

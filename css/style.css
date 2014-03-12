@@ -1,11 +1,16 @@
 #hiddeniframe { position : fixed ; top : -5000px ; }
 
-h1, h2 {
+h1, h2, h3 {
     text-align:center;
 }
 
 .container {
     margin: 40px auto;
+    min-height: 100%;
+}
+.container:after {
+  content: "";
+  display: block;
 }
 
 #puppy {
@@ -15,6 +20,7 @@ h1, h2 {
 ul#attribution {
     font-size:0.8em;
     list-style-type:none;
+    height: 100px;
 }
 
 ul#attribution li {
